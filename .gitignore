@@ -1,0 +1,35 @@
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
+build
+.gradle
+
+# other
+eclipse
+run
+
+# Files from Forge MDK
+forge*changelog.txt
+
+# 参考模组(非本项目代码, 仅开发参考用)
+CarpetSkyAdditions-1.20/
+CarpetSkyAdditions-1.20.zip
+
+# 映射源码(开发参考用, 非本项目代码)
+temp/
+
+# 错误报告日志
+logs/

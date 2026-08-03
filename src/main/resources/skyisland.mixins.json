@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8.5",
+  "package": "com.skyisland.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "skyisland.refmap.json",
+  "mixins": [
+    "MixinEndDragonFight",
+    "MixinNetherFortressStructure"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

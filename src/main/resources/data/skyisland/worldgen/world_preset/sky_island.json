@@ -1,0 +1,48 @@
+{
+  "dimensions": {
+    "minecraft:overworld": {
+      "type": "minecraft:overworld",
+      "generator": {
+        "type": "skyisland:overworld_sky_island",
+        "biome_source": {
+          "type": "minecraft:multi_noise",
+          "preset": "minecraft:overworld"
+        },
+        "settings": "minecraft:overworld",
+        "platform_x": 8,
+        "platform_y": 64,
+        "platform_z": 8,
+        "platform_size": 5
+      }
+    },
+    "minecraft:the_nether": {
+      "type": "minecraft:the_nether",
+      "generator": {
+        "type": "skyisland:nether_sky_island",
+        "biome_source": {
+          "type": "minecraft:multi_noise",
+          "preset": "minecraft:nether"
+        },
+        "settings": "minecraft:nether",
+        "platform_x": 8,
+        "platform_y": 64,
+        "platform_z": 8,
+        "platform_size": 5
+      }
+    },
+    "minecraft:the_end": {
+      "type": "minecraft:the_end",
+      "generator": {
+        "type": "skyisland:end_sky_island",
+        "biome_source": {
+          "type": "minecraft:the_end"
+        },
+        "settings": "minecraft:end",
+        "platform_x": 100,
+        "platform_y": 48,
+        "platform_z": 0,
+        "platform_size": 5
+      }
+    }
+  }
+}
