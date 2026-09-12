@@ -1,7 +1,6 @@
 package com.skyisland;
 
 import com.mojang.logging.LogUtils;
-import com.skyisland.config.SkyIslandConfig;
 import com.skyisland.core.registry.SkyRegistries;
 import com.skyisland.core.worldgen.AbstractSkyIslandChunkGenerator;
 import net.minecraft.core.BlockPos;
@@ -13,13 +12,13 @@ import net.minecraftforge.event.level.LevelEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 /**
  * 空岛生成器主类
- * 负责模组初始化、注册表挂载、配置加载、出生点事件
+ * 负责模组初始化、注册表挂载、出生点事件
+ * 平台坐标由 world_preset JSON 控制, 每个存档独立保存(level.dat序列化)
  */
 @Mod(SkyIslandMod.MOD_ID)
 public class SkyIslandMod {
@@ -30,7 +29,6 @@ public class SkyIslandMod {
         IEventBus modEventBus = context.getModEventBus();
 
         SkyRegistries.register(modEventBus);
-        context.registerConfig(ModConfig.Type.COMMON, SkyIslandConfig.SPEC, "skyisland-common.toml");
         MinecraftForge.EVENT_BUS.register(this);
 
         LOGGER.info("Sky Island Generator mod initialized");
